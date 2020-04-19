@@ -1,3 +1,6 @@
-repalce the tab in makefile
+This is the working directory of the itpp container. Files modified in this folder will be synced whether the container is running or not.
 
-this folder will be updated to the container at each run
+
+
+replace the tab in makefile
+
