@@ -22,6 +22,7 @@ RUN cd itpp-4.3.1 \
     && make \
     && make install \
     && ldconfig /usr/local/lib
+
 RUN cd ../.. \
     && make qq \
     && ./qq \
