@@ -9,3 +9,7 @@ https://hub.docker.com/_/gcc
 
 
 todo: using staged build. keep source file in src
+
+large image
+
+https://stackoverflow.com/questions/24394243/why-are-docker-container-images-so-large
