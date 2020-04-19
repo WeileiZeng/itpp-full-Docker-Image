@@ -9,13 +9,15 @@ RUN apt-get update \
        cmake \
        tmux
 
-COPY . /usr/src/myapp
+COPY ./src /usr/src/myapp/src
 WORKDIR /usr/src/myapp
 
 # to do, install BLAS LAPACK FFT
 
 # install itpp from source
-RUN cd itpp-4.3.1 \
+RUN ls \
+    && cd src \
+    && cd itpp-4.3.1 \
     && mkdir build \
     && cd build \
     && cmake .. \
@@ -23,11 +25,15 @@ RUN cd itpp-4.3.1 \
     && make install \
     && ldconfig /usr/local/lib
 
-RUN cd ../.. \
-    && make qq \
-    && ./qq \
-    && make jj \
-    && ./jj 
+COPY ./makefile /usr/src/myapp
+COPY ./hello-itpp.cpp /usr/src/myapp
+COPY ./hello-cpp.cpp /usr/src/myapp
+
+RUN ls \
+    && g++ -o hello-cpp hello-cpp.cpp \
+    && ./hello-cpp \
+    && g++ `itpp-config --cflags` -o hello-itpp hello-itpp.cpp `itpp-config --libs` \
+    && ./hello-itpp
     
 
 
