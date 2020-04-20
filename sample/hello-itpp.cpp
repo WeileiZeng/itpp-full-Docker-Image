@@ -2,11 +2,12 @@
 #include <itpp/itcomm.h>
 
 int main() {
-  std::cout << "Hello World\n";
+
   itpp::bvec bb(3);
   bb.zeros();
   bb.set(1,1);
-  std::cout<<bb<<std::endl;
+  std::cout<<"itpp bvec = "<<bb<<std::endl;
+  std::cout<<"itpp test passed \n";
   return 0;
 
 }

@@ -5,8 +5,8 @@ RUN apt-get update \
        cmake \
        tmux
 
-COPY ./src /usr/src/src
-WORKDIR /usr/src/src
+COPY ./src /usr/src
+WORKDIR /usr/src
 
 
 # This is a full/partial version, with BLAS and LAPACK but without FFT
@@ -21,9 +21,12 @@ RUN ls \
     && make install \
     && ldconfig /usr/local/lib
 
-COPY ./sample /usr/src/sample
+# install Eigen from source
+RUN cp -r /usr/src/eigen-3.3.7/Eigen /usr/include/
 
-WORKDIR /usr/src/workspace
+COPY ./sample /root
+
+WORKDIR /root
 
     
 
