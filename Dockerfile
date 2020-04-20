@@ -1,10 +1,6 @@
-FROM gcc:4.9
+FROM dbjochym/gfortran_static_lapack_blas
 RUN apt-get update \
     && apt-get install -y \
-#       software-properties-common \
-#       apt-utils \
-#       curl \
-       make \
        emacs \
        cmake \
        tmux
@@ -13,7 +9,7 @@ COPY ./src /usr/src/src
 WORKDIR /usr/src/src
 
 
-# This is a light version, without BLAS and LAPACK FFT
+# This is a full/partial version, with BLAS and LAPACK but without FFT
 
 # install itpp from source
 RUN ls \
