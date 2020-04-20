@@ -1,9 +1,9 @@
 FROM gcc:4.9
 RUN apt-get update \
     && apt-get install -y \
-       software-properties-common \
-       apt-utils \
-       curl \
+#       software-properties-common \
+#       apt-utils \
+#       curl \
        make \
        emacs \
        cmake \
@@ -13,7 +13,7 @@ COPY ./src /usr/src/src
 WORKDIR /usr/src/src
 
 
-# to do, install BLAS LAPACK FFT
+# This is a light version, without BLAS and LAPACK FFT
 
 # install itpp from source
 RUN ls \
@@ -25,13 +25,10 @@ RUN ls \
     && make install \
     && ldconfig /usr/local/lib
 
-COPY ./workspace /usr/src/workspace
+COPY ./sample /usr/src/sample
 
 WORKDIR /usr/src/workspace
 
-
-RUN ls \
-    && ./test.sh
     
 
 

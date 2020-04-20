@@ -1,1 +1,1 @@
-docker build -t itpp .
+docker build --no-cache -t itpp-light .
