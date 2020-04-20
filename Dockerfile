@@ -24,7 +24,7 @@ RUN ls \
 # install Eigen from source
 RUN cp -r /usr/src/eigen-3.3.7/Eigen /usr/include/
 
-COPY ./sample /root
+COPY ./sample /root/sample/
 
 WORKDIR /root
 
