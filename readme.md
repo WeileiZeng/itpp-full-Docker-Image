@@ -6,7 +6,7 @@ and ubuntu, gcc, cmake, make, tmux
 
 ### How to run?
 - install [Docker](https://www.docker.com/)
-- docker run -it weileizeng/itpp-full
+- `docker run -it weileizeng/itpp-full`
 - It is done. Now you got a shell running on ubuntu (container) with all the packages mentioned.
 
 
@@ -19,7 +19,7 @@ and ubuntu, gcc, cmake, make, tmux
 ### more advantaged use
 set up a folder `workspace` to share files between your system and the container. Everything outside this folder will be reset upon restarting the container.
 
-`docker run -it --rm -v `pwd`/workspace:/root/workspace --name running-itpp-full itpp-full`
+`docker run -it --rm -v \`pwd\`/workspace:/root/workspace --name running-itpp-full itpp-full`
 
 
 ### Dockerfile structure
@@ -40,7 +40,7 @@ set up a folder `workspace` to share files between your system and the container
 
 ### TODO
 - [x] using staged build. keep source file in src
-- [ ] large image
+- [ ] size of image is too large
   - https://stackoverflow.com/questions/24394243/why-are-docker-container-images-so-large
 
 
