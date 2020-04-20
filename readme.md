@@ -18,9 +18,9 @@ and ubuntu, gcc, cmake, make, tmux
 
 ### more advantaged use
 set up a folder `workspace` to share files between your system and the container. Everything outside this folder will be reset upon restarting the container.
-
-`docker run -it --rm -v \`pwd\`/workspace:/root/workspace --name running-itpp-full weileizeng/itpp-full`
-
+```
+docker run -it --rm -v `pwd`/workspace:/root/workspace --name running-itpp-full weileizeng/itpp-full
+```
 
 ### Dockerfile structure
 - [x] set up base image with gcc, BLAS, LAPACK
