@@ -17,8 +17,11 @@ RUN apt-get update \
 
 RUN apt-get install -y emacs
 
-RUN useradd -ms /bin/bash guest
+COPY ./sample /root/sample
+WORKDIR /root
 
-COPY ./sample /home/guest/sample
-USER guest
-WORKDIR /home/guest
+# RUN useradd -ms /bin/bash guest
+
+# COPY ./sample /home/guest/sample
+# USER guest
+# WORKDIR /home/guest
