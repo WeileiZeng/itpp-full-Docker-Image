@@ -1,4 +1,9 @@
-docker run -it --rm -v `pwd`/workspace:/root/workspace --name running-itpp-full itpp-full
+docker run -it --rm -v `pwd`/workspace:/home/guest//workspace --name running-itpp-full itpp-full
+
+#docker run -it --rm -v `pwd`/workspace:/root/workspace --name running-itpp-full itpp-full:85b3e37
+
+#docker run -it --rm -v `pwd`/workspace:/root/workspace --name running-itpp-full itpp-full:version2.0
+
 
 # docker run -it --rm -v `pwd`/workspace:/root/workspace --name running-itpp-full itpp-full
 
