@@ -1,4 +1,4 @@
-FROM weileizeng/itpp-full
+FROM weileizeng/itpp-full:latest
                     
 USER gitpod
 
