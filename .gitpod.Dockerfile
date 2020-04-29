@@ -1,6 +1,8 @@
 FROM weileizeng/itpp-full:latest
-                    
-USER gitpod
+
+USER guest
+
+#USER gitpod
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
