@@ -1,12 +1,30 @@
-FROM weileizeng/itpp-full:latest
+# FROM weileizeng/itpp-full:latest
 
-#USER guest
+FROM gitpod/workspace-full
 
-RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
-    && sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
 
-# RUN useradd -ms /bin/bash gitpod
+RUN sudo apt-get update \
+    && sudo apt-get install -y \
+    libblas-dev \
+    liblapack-dev \
+    libitpp-dev \
+    libeigen3-dev
+
+# note: gcc is install along with blas, g++ is installed along with eigen. make is also installed
+
+RUN sudo apt-get install -y emacs
+
+# COPY ./sample /root/sample
+# WORKDIR /root
+
+# RUN useradd -ms /bin/bash guest
+
+
 USER gitpod
+COPY ./sample /home/gitpod/sample
+WORKDIR /home/gitpod
+
+
 
 
 # Install custom tools, runtime, etc. using apt-get
