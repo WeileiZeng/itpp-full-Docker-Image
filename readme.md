@@ -7,16 +7,21 @@ with BLAS, LAPACK
 and ubuntu, gcc, cmake, make, tmux
 
 ### How to run?
-- install [Docker](https://www.docker.com/)
-- `docker run -it weileizeng/itpp-full`
-- It is done. Now you got a shell running on ubuntu (container) with all the packages mentioned.
+- online 
+  - run it on [gitpod](https://gitpod.io/#https://github.com/WeileiZeng/itpp-full-Docker-Image) by one click
+- locally
+  - install [Docker](https://www.docker.com/)
+  - `docker run -it weileizeng/itpp-full`
+  - It is done. Now you got a shell running on ubuntu (container) with all the packages mentioned.
 
 
 ### version log
 - version 0  gcc, BLAS, LAPACK
 - version1.0 itpp
 - version1.1 Eigen 
-
+- version2.0 change start image to ubuntu:xenial
+- gitpod  change start image to gitpod workspace-full
+- latest
 
 ### more advantaged use
 set up a folder `workspace` to share files between your system and the container. Everything outside this folder will be reset upon restarting the container.
