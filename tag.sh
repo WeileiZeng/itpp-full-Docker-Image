@@ -1,5 +1,8 @@
-docker tag itpp weileizeng/itpp-full:version2.0
-docker push weileizeng/itpp-full:version2.0
+#docker tag itpp weileizeng/itpp-full:version2.0
+#docker push weileizeng/itpp-full:version2.0
+
+docker tag itpp-full:gitpod weileizeng/itpp-full:gitpod
+docker push weileizeng/itpp-full:gitpod
 
 
 
