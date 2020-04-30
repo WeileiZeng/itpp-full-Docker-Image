@@ -4,5 +4,5 @@ tasks:
       remove me entirely."
 image: 
 #  file: Dockerfile
-#  file: .gitpod.Dockerfile
-  file: Dockerfile-gitpod
+  file: .gitpod.Dockerfile
+#  file: Dockerfile-gitpod
